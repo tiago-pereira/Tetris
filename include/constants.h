@@ -1,0 +1,8 @@
+#ifndef CONSTANTS_H_INCLUDED
+#define CONSTANTS_H_INCLUDED
+
+const int WINDOW_WIDTH = 360;
+const int WINDOW_HEIGHT = 720;
+
+
+#endif // CONSTANTS_H_INCLUDED

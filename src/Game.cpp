@@ -1,6 +1,4 @@
 #include "Game.h"
-#include <iostream>
-#include <stdio.h>
 #include "constants.h"
 
 Game::Game():piece(static_cast<Piece::Type>(rand() % 7)),moveTime(SDL_GetTicks()){

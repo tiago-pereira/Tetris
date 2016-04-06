@@ -1,12 +1,8 @@
 # depslib dependency file v1.0
-1459903634 source:/home/tasey/Documents/tauretris/Tauretris/main.cpp
+1459909508 source:/home/tasey/Documents/tauretris/Tauretris/main.cpp
 	<SDL2/SDL.h>
 	<SDL2/SDL_image.h>
-	<stdio.h>
-	<string>
 	"Game.h"
-	<iostream>
-	"constants.h"
 
 1459906713 /home/tasey/Documents/tauretris/Tauretris/include/Game.h
 	<SDL2/SDL.h>
@@ -22,13 +18,11 @@
 	<SDL2/SDL.h>
 	"constants.h"
 
-1459907021 source:/home/tasey/Documents/tauretris/Tauretris/src/Board.cpp
+1459908698 source:/home/tasey/Documents/tauretris/Tauretris/src/Board.cpp
 	"Board.h"
 
-1459907407 source:/home/tasey/Documents/tauretris/Tauretris/src/Game.cpp
+1459909538 source:/home/tasey/Documents/tauretris/Tauretris/src/Game.cpp
 	"Game.h"
-	<iostream>
-	<stdio.h>
 	"constants.h"
 
 1459907513 source:/home/tasey/Documents/tauretris/Tauretris/src/Piece.cpp

@@ -31,6 +31,17 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Linker>
+			<Add option="-lSDL2 -lSDL2_image" />
+		</Linker>
+		<Unit filename="include/Board.h" />
+		<Unit filename="include/Game.h" />
+		<Unit filename="include/Piece.h" />
+		<Unit filename="include/constants.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/Board.cpp" />
+		<Unit filename="src/Game.cpp" />
+		<Unit filename="src/Piece.cpp" />
 		<Extensions>
 			<code_completion />
 			<debugger />

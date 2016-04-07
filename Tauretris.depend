@@ -34,3 +34,18 @@
 
 1459903847 /home/tasey/Documents/tauretris/Tauretris/include/constants.h
 
+1460067055 source:/home/tasey/Documents/Tetris/main.cpp
+	<SDL2/SDL.h>
+	<SDL2/SDL_image.h>
+	"Game.h"
+
+1460067055 source:/home/tasey/Documents/Tetris/src/Board.cpp
+	"Board.h"
+
+1460067055 source:/home/tasey/Documents/Tetris/src/Game.cpp
+	"Game.h"
+	"constants.h"
+
+1460067055 source:/home/tasey/Documents/Tetris/src/Piece.cpp
+	"Piece.h"
+

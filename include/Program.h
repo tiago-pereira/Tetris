@@ -1,16 +1,16 @@
-#ifndef GAME_H
-#define GAME_H
+#ifndef PROGRAM_H
+#define PROGRAM_H
 
 #include <SDL2/SDL.h>
 #include "Board.h"
 #include "Piece.h"
 
-class Game
+class Program
 {
     public:
-        Game();
-        virtual ~Game();
-        bool loop();
+        Program();
+        virtual ~Program();
+        bool start();
     protected:
     private:
 
@@ -28,4 +28,4 @@ class Game
         uint32_t moveTime;
 };
 
-#endif // GAME_H
+#endif // PROGRAM_H

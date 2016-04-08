@@ -1,9 +1,8 @@
-#include "Game.h"
+#include "Program.h"
 #include "CFG.h"
 #include "MenuManager.h"
 
-
-Game::Game():piece(static_cast<Piece::Type>(rand() % 7)),moveTime(SDL_GetTicks()){
+Program::Program():piece(static_cast<Piece::Type>(rand() % 7)),moveTime(SDL_GetTicks()){
     if (SDL_Init(SDL_INIT_VIDEO) != 0) {
         printf("Error SDL_Init(SDL_INIT_VIDEO)");
     }
@@ -12,13 +11,13 @@ Game::Game():piece(static_cast<Piece::Type>(rand() % 7)),moveTime(SDL_GetTicks()
     SDL_SetWindowPosition(window, 500, 126);
 }
 
-Game::~Game(){
+Program::~Program(){
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);
     SDL_Quit();
 }
 
-bool Game::loop(){
+bool Program::start(){
 
     while(mainEvent.type != SDL_QUIT) {
 
@@ -31,15 +30,15 @@ bool Game::loop(){
 
 }
 
-void Game::update(){
+void Program::update(){
 
 }
 
-void Game::draw(){
+void Program::draw(){
 
 }
 
-void Game::handlePlayerInput(){
+void Program::handlePlayerInput(){
 
 
         switch (mainEvent.type) {
@@ -103,7 +102,7 @@ void Game::handlePlayerInput(){
 
 }
 
-void Game::handleInput(){
+void Program::handleInput(){
 
     switch(CFG::getMM()->getCurrentStateID()){
         case MenuManager::eMainMenu: {
@@ -125,7 +124,7 @@ void Game::handleInput(){
 
 }
 
-void Game::check(const Piece &p){
+void Program::check(const Piece &p){
   if (board.isCollision(p)) {
     board.unite(piece);
     piece = Piece{static_cast<Piece::Type>(rand() % 7)};

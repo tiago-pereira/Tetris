@@ -1,12 +1,10 @@
 
-#include <SDL2/SDL.h>
-#include <SDL2/SDL_image.h>
-#include "Game.h"
+#include "Program.h"
 
 int main(int argc, char* args[]) {
 
-    Game game;
-    while (game.loop());
+    Program game;
+    game.start();
 
     return 0;
 }

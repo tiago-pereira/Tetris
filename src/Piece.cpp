@@ -1,4 +1,5 @@
 #include "Piece.h"
+#include "CFG.h"
 
 Piece::Piece(Type type):type(type),x(10/2-4/2),y(0),angle(0){
     //ctor
@@ -56,7 +57,7 @@ void Piece::render(SDL_Renderer *renderer) {
     for (int k = 0; k < 4; ++k) {
         for (int j = 0; j < 4; ++j) {
             if (isBlock(k, j)){
-                SDL_Rect rect{(k + x) * WINDOW_WIDTH / 10 + 1, (j + y) * WINDOW_WIDTH / 10 + 1, WINDOW_WIDTH / 10 - 2, WINDOW_WIDTH / 10 - 2};
+                SDL_Rect rect{(k + x) * CFG::WINDOW_WIDTH / 10 + 1, (j + y) * CFG::WINDOW_WIDTH / 10 + 1, CFG::WINDOW_WIDTH / 10 - 2, CFG::WINDOW_WIDTH / 10 - 2};
                 SDL_RenderFillRect(renderer, &rect);
             }
         }

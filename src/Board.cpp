@@ -1,4 +1,5 @@
 #include "Board.h"
+#include "CFG.h"
 
 Board::Board():grid{{false}}{
     //ctor
@@ -15,15 +16,15 @@ void Board::render(SDL_Renderer *renderer){
         for (int y = 0; y < blockCountY; ++y){
             if (grid[x][y]) {
                 SDL_Rect rect;
-                rect.x = x * WINDOW_WIDTH / blockCountX + 1;
-                rect.y = y * WINDOW_WIDTH / blockCountX + 1;
-                rect.w = WINDOW_WIDTH / blockCountX - 2;
-                rect.h = WINDOW_WIDTH / blockCountX - 2;
+                rect.x = x * CFG::WINDOW_WIDTH / blockCountX + 1;
+                rect.y = y * CFG::WINDOW_WIDTH / blockCountX + 1;
+                rect.w = CFG::WINDOW_WIDTH / blockCountX - 2;
+                rect.h = CFG::WINDOW_WIDTH / blockCountX - 2;
 
                 SDL_RenderFillRect(renderer, &rect);
             } else {
-                SDL_RenderDrawPoint(renderer, x * WINDOW_WIDTH / blockCountX + WINDOW_WIDTH / blockCountX / 2,
-                                  y * WINDOW_WIDTH / blockCountX + WINDOW_WIDTH / blockCountX / 2);
+                SDL_RenderDrawPoint(renderer, x * CFG::WINDOW_WIDTH / blockCountX + CFG::WINDOW_WIDTH / blockCountX / 2,
+                                  y * CFG::WINDOW_WIDTH / blockCountX + CFG::WINDOW_WIDTH / blockCountX / 2);
             }
         }
     }
